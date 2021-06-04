@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orion Hospital - Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+    function ovl(){
+    document.getElementById("overlay").style.display = "block";
+    }
+
+    </script>
+    <style>
+    body{
+        background-image:url('hospitalbg.jpg');
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-attachment:fixed; 
+        color:white;
+    }
+    #overlay{
+        position:fixed;
+        display:none;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color:rgba(0,0,0,0.66);
+        z-index:-5;
+    }
+    #logo1{
+        width:150px;
+        height:auto;
+        float:right;
+        padding:10px;
+    }
+    #usericon{
+        width:55px;
+        height:auto;
+        padding:10px;
+        z-index:1;
+    }
+    #header1{
+        float:left;
+        width:100%;
+        font-family:Brush Script MT;
+        font-size:400%;
+        text-align:center;
+        z-index:1;
+        background-color:rgba(0,0,0,0.66);
+        margin-bottom:-10px;
+    }
+    #header2{
+        float:left;
+        width:6%;
+        z-index:1;
+        background-color:rgba(0,0,0,0.66);
+        margin-bottom:-10px;
+    }
+    #navbar{
+        float:left;
+        width:100%;
+        font-family:verdana;
+        font-size:100%;
+        text-align:center;
+        z-index:1;
+    }
+    #navlist{
+        list-style-type:none;
+        margin-top:10px;
+        width:100%;
+        float:left;
+        padding:0;
+        overflow:hidden;
+        background-color:rgba(0,0,0,0.66);
+        border-top:2px solid rgba(100,100,100,1);
+    }
+    .navli{
+        float:left;
+    }
+    .navlia{
+        display:block;
+        color:white;
+        text-align:center;
+        padding:16px;
+        text-decoration:none;
+        font-family:verdana;
+    }
+    .navaccount{
+        float:right;
+    }
+    .navlia:hover{
+        background-color:rgba(75,75,75,0.5);
+    }
+    li a:hover{
+        background-color:rgba(75,75,75,0.5);
+    }
+    #iconhover:hover{
+        background-color:rgba(75,75,75,0.5);
+    }
+    marquee{
+        background-color:rgba(0,0,0,0.66);
+        height:25px;
+        padding:2px;
+        margin-top:-16px;
+        font-family:verdana;
+        border-top:2px solid rgba(100,100,100,1);
+        color:DodgerBlue;
+    }
+    .dpdnmain{
+        overflow:hidden;
+        float:right;
+    }
+    .dpdnmain a{
+        float:left;
+        font-size:16px;
+        color:white;
+        text-align: center;
+        padding:12px 16px;
+        text-decoration:none;
+    }
+    .dropdown{
+        font-size:16px;  
+        border:none;
+        outline:none;
+        color:white;
+        font-family:inherit;
+        float:left;
+        overflow:hidden;
+    }
+    .dropdown-content{
+        display:none;
+        position:absolute;
+        background-color:#111;
+        min-width:2px;
+        box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index:2;
+    }
+    .dropdown-content a{
+        float:none;
+        color:white;
+        font-family:verdana;
+        font-size:87%;
+        background-color:#111;
+        text-decoration:none;
+        display:block;
+        text-align:left;
+        z-index:2;
+    }
+    .dropdown-content a:hover{
+        background-color:#555;
+    }
+    .dropdown:hover .dropdown-content{
+        display:block;
+    }
+    .parastyle{
+        opacity:0.9;
+        font-size:133%;
+        font-family:arial;
+    }
+    .photoright{
+        width:auto;
+        height:350px;
+        float:right;
+        border:3px solid rgba(20,80,200,1);
+        padding:0px;
+        margin-left:15px;
+    }
+    .photoleft{
+        width:auto;
+        height:350px;
+        float:left;
+        border:3px solid rgba(20,80,200,1);
+        padding:0px;
+        margin-left:15px;
+    }
+    .servli{
+        display:block;
+        color:white;
+        text-align:center;
+        padding:16px;
+        text-decoration:none;
+        font-family:verdana;
+    }
+    .homeservlist{
+        text-align:center;
+        padding:0px;
+    }
+    </style>
+</head>
+
+<body onLoad="ovl();">
+<p>
+<div id="overlay"></div>
+</p>
+
+<p>
+<div id="header1">
+Welcome to Orion!
+<div style="float:right;">
+<img id="logo1" src="finalorionlogo.png" alt="Orion Logo">
+</div>
+<div class="dpdnmain">
+<div class="dropdown" style="margin:0px;">
+<a id="iconhover" href="#about" style="padding:0px;"><img id="usericon" src="usericon.png" alt="User" usemap="#userclick"></a>
+<div class="dropdown-content" style="margin-top:70px;">
+    <a href="#">Login</a>
+    <a href="#">Signup</a>
+</div>
+</div>
+<!--map name="userclick">
+  <area shape="circle" coords="40,40,30" alt="usericon" href="homepage.html">
+</map-->
+</div>
+</div>
+
+<p>
+<div id="navbar">
+<ul id="navlist">
+    <li class="navli"><a class="navlia" href="homepage.html">Home</a></li>
+    <li class="navli"><a class="navlia" href="#about">About Us</a></li>
+    <li style="float:left;margin:-16px;">
+    <div class="dpdnmain" style="display:block;color:white;text-align:center;padding:16px;text-decoration:none;font-family:verdana;">
+    <div class="dropdown">
+    <a href="#about" style="padding:16px;">Services <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content" style="margin-top:50px;">
+        <a style="width:125%;" href="#">ser 1</a>
+        <a style="width:125%;" href="#">ser 2</a>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li class="navli"><a class="navlia" href="#team">International Patients</a></li>
+    <li class="navli"><a class="navlia" href="#contact">Hospitals</a></li>
+    <li class="navli"><a class="navlia" href="#team">Our Team</a></li>
+    <li class="navli"><a class="navlia" href="#contact">Contact Us</a></li>
+    <!--li class="navaccount"><a href="#signup">Signup</a></li>
+    <li class="navaccount"><a href="#login">Login</a></li-->
+</ul>
+</div>
+</p>
+
+<marquee><b>COVID-19 facilities available!</b></marquee>
+
+<p class="parastyle">
+<img class="photoright" src="photo1.jpg" alt="Hospital entry">
+<h2 class="heading">
+<p style="margin-top:75px;font-family:Verdana;text-align:center;opacity:0.9;color:DodgerBlue;background-color:rgba(0,0,0,0.66);width:40%;padding:16px;margin-left:100px;">We Offer Fast & Reliable Medical & Health
+Care Solutions to Our Patients</p>
+</h2>
+<br>
+<p class="parastyle" style="margin-top:15px;">
+Orion hospital is a multispecialty hospital with facilities available for common illness as well as complex diseases. It is located in heart of Wakad, Pune. It is one and the only hospital in nearby vicinity which has got sophisticated treatments such as IVF (Test tube baby), Joint replacements, arthroscopies, Intensive care unit, digital X-ray under one roof.
+</p>
+</p>
+
+<br>
+<br>
+<br>
+
+<p class="parastyle">
+<img class="photoleft" src="photo2.jpg" alt="Hospital room">
+<div style="background-color:rgba(0,0,0,0.66);margin:25px;">
+<div style="background-color:rgba(0,0,0,0.66);width:25%;float:left;margin-left:60px;margin-top:20px;">
+<ul class="homeservlist">
+<li class="servli">Orthopedics</li>
+<li class="servli">Gynecology & Infertility</li>
+<li class="servli">IVF</li>
+<li class="servli">Breast Clinic</li>
+<li class="servli">ENT</li>
+</div>
+<div style="background-color:rgba(0,0,0,0.66);width:25%;float:left;margin-left:60px;margin-top:20px;">
+<ul class="homeservlist">
+<li class="servli">Paediatric</li>
+<li class="servli">General Surgery</li>
+<li class="servli">Joint Replacement</li>
+<li class="servli">Physiotherapy</li>
+<li class="servli">General Medicines</li>
+</div>
+</div>
+</p>
+
+<br>
+<br>
+<br>
+
+<p class="parastyle">
+<img class="photoright" src="photo3.jpg" alt="Hospital room 2" style="margin-top:80px;">
+<h2 class="heading">
+<p style="margin-top:490px;font-family:Verdana;text-align:center;opacity:0.9;color:DodgerBlue;background-color:rgba(0,0,0,0.66);width:40%;padding:16px;margin-left:100px;">
+Why choose Orion Health Care?</p>
+</h2>
+</p>
+
+<p class="parastyle">
+<img class="photoleft" src="photo4.jpg" alt="Hospital room 3" style="margin-top:150px;">
+<p class="parastyle" style="margin-top:15px;">
+<div style="background-color:rgba(0,0,0,0.66);width:25%;float:left;padding:10px;margin-left:25px;margin-top:50px;height:135px;font-family:arial;">
+<h3 style="color:DodgerBlue">7,000+ Healing Hands</h3>
+Largest network of the world’s finest and brightest medical experts who provide compassionate care using outstanding expertise and advanced technology.
+</div>
+</p>
+<div style="background-color:rgba(0,0,0,0.66);width:25%;float:left;padding:10px;margin-left:35px;margin-top:50px;height:135px;font-family:arial;">
+<h3 style="color:DodgerBlue">4,000+ Pharmacies</h3>
+Apollo Pharmacy is India’s first, largest and most trusted branded pharmacy network, with over 4000 plus outlets covering the entire nation.
+</div>
+
+<div style="background-color:rgba(0,0,0,0.66);width:25%;float:left;padding:10px;margin-left:25px;margin-top:15px;height:135px;font-family:arial;">
+<h3 style="color:DodgerBlue">Most Advanced Healthcare Technology</h3>
+Apollo Hospitals has been the pioneer in bringing ground-breaking healthcare technologies to India.
+</div>
+</p>
+<div style="background-color:rgba(0,0,0,0.66);width:25%;float:left;padding:10px;margin-left:35px;margin-top:15px;height:135px;font-family:arial;">
+<h3 style="color:DodgerBlue">Best Clinical Outcomes</h3>
+Leveraging its vast medical expertise & technological advantage, Apollo Hospitals has consistently delivered best in class clinical outcomes.
+</div>
+</p>
+</p>
+</body>
