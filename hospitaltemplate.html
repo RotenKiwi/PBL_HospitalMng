@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Registration Page - Orion Hospital</title>
+    <title>title Page - Orion Hospital</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript"
-    src="validate.js">
-    </script>
     <script>
     function ovl(){
     document.getElementById("overlay").style.display = "block";
     }
+
     </script>
-    
     <style>
     body{
         background-image:url('bggreen2.jpg');
@@ -156,49 +153,13 @@
         border-top:2px solid black;
         color:orangered;
     }
-    table{
-        background-color:rgba(40,115,75,0.86);
-        padding:16px;
-        margin-top:10px;
-    }
-    td{
-        font-family:verdana;
-        padding:12px;
-        font-size:113%;
-    }
-    .inputfields{
-        background-color:rgba(100,205,100,0.86);
-        padding:5px;
-        color:black;
-        font-size:90%;
-    }
-    .selectdrop{
-        background-color:rgba(100,205,100,0.86);
-        padding:5px;
-        color:black;
-        font-size:90%;
-        width:150px;
-    }
-    option{
-        background-color:rgba(100,205,100,0.86);
-        padding:5px;
-        color:black;
-        font-size:86%;
-    }
-    .databuttons{
-        color:black;
-        font-family:verdana;
-        font-size:86%;
-        background-color:rgba(100,205,100,0.86);
-        padding:7.5px;
-    }
     </style>
     </head>
 
-    <body onLoad="ovl();">
-        <p>
-        <div id="overlay"></div>
-        </p>
+<body onLoad="ovl();">
+    <p>
+    <div id="overlay"></div>
+    </p>
 
     <p>
     <div id="header1">
@@ -254,126 +215,8 @@
     </div>
     </p>
 
-<marquee><b>COVID-19 facilities available!</b></marquee>
+    <marquee><b>COVID-19 facilities available!</b></marquee>
 
-
-        <form action="#" name="Hospital Registration Form"
-        onsubmit="return(validate());">
-        <table cellpadding="2" width="50%" bgcolor=""
-        align="center"
-        cellspacing="2"
-
-        <tr>
-            <td colspan="3" style="border-bottom:2px solid black;">
-                <center><h3 style="<background-color:red;font-family:calibri;"><font size=6><b>HOSPITAL REGISTRATION FORM</b></h3></font></center>
-            </td>
-        </tr>
-
-        <tr>
-            <td> Patient's Name</td>
-            <td><input class="inputfields" type=text name=textnames id="textname" size="30"></td>
-        </tr>
-
-        <tr>
-            <td>Father's Name</td>
-            <td><input class="inputfields" type="text" name="fathername" id="fathername" size="30"></td>
-        </tr>
-
-        <tr>
-            <td>Address</td>
-            <td><input class="inputfields" type="text" name="Paddress" id="Paddress" size="30"></td>
-        </tr>
-
-        <tr>
-            <td>Sex</td>
-            <td><input type="radio" name="sex" Value="Male" size="10">Male
-                <input type="radio" name="redio" Valu="Female" size="10">Female
-                <input type="radio" name="sex" Value="Other" size="10">Other
-        </tr>
-
-        <td>State</td>
-        <td><select class="selectdrop" Name="State">
-        <option Value="-1 selected">Select</option>
-        <option value="Maharastra">Maharastra</option>
-        <option value="Other">Other</option>
-        </SELECT></TD>
-    </tr>
-
-
-        <td>District</td>
-        <td><select class="selectdrop" Name="District">
-        <option Value="-1 selected">Select</option>
-        <option value="Akola">Akola</option>
-        <option value="Aurangabad">Aurangabad</option>
-        <option value="Thane">Thane</option>
-        <option value="Satara">Satara</option>
-        <option value="Wardha">Wardha</option>
-        <option value="Haveli">Haveli</option>
-        <option value="Pune City">Pune City</option>
-        <option value="Mumbai City">Mumbai City</option>
-        <option value="Other">Other</option>
-        </SELECT></TD>
-    </tr>
-
-
-    <td>City</td>
-    <td><select class="selectdrop" Name="City">
-    <option Value="-1 selected">Select</option>
-    <option value="Nagpur">Nagpur</option>
-    <option value="Mumbai">Mumbai</option>
-    <option value="Pune">Pune</option>
-    <option value="Nashik">Nashik</option>
-    <option value="Solapur">Solapur</option>
-    <option value="Aurangabad">Aurangabad</option>
-    <option value="Other">Other</option>
-    </SELECT></TD>
-</tr>
-
-<tr>
-<td>Pincode</td>
-<td><input class="inputfields" type="text" name="Pincode" id="pincode" size="30"></td>  
-
-
-<tr>
-  <td>Reason of Registration</td>
-    <td><select class="selectdrop" Name="Reason of Registration">
-    <option Value="-1 selected">Select</option>
-    <option value="Concussion">Concussion</option>
-    <option value="Fracture">Fracture</option>
-    <option value="Monthly Checkup">Monthly Checkup</option>
-    <option value="Scan">Scan</option>
-    <option value="Blood Test">Blood Test</option>
-    <option value="Other">Other</option>
-    </SELECT></TD>
-</tr>
-
-<tr>
-<td>Email ID</td>
-<td><input class="inputfields" type="text" name="email id" id="email id" size="30"></td>
-</tr>
-
-
-<tr>
-<td>D.O.B.</td>
-<td><input class="selectdrop" type="date" name="dob" id="dob" size="30"></td>
-</tr>
-<tr>
-
-
- <td>Mobile No.</td>
-<td><input class="inputfields" type="text" name="Mobile No" id="Mobile No" size="30"></td>
-</tr>
-
-<td>Contact (In Case Of Emergency)</td>
-<td><input class="inputfields" type="text" name="Mobile No" id="Mobile No" size="30"></td>
-</tr>
-
-<tr>
-<td><input class="databuttons" type="reset"></td>
-<td colspan="2"><input class="databuttons" type="Submit" value="Submit form"></td>
-</tr>
-</table>
-</form>
 </body>
 </html>
 
