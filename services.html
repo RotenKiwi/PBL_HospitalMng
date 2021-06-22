@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Services - Orion Hospital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+    function ovl(){
+    document.getElementById("overlay").style.display = "block";
+    }
+
+    </script>
+    <style>
+    body{
+        background-image:url('bggreen2.jpg');
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-attachment:fixed; 
+        color:white;
+    }
+    #overlay{
+        position:fixed;
+        display:none;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color:rgba(0,0,0,0.15);
+        z-index:-5;
+    }
+    #usericon{
+        width:55px;
+        height:auto;
+        padding:10px;
+        z-index:1;
+        float:right;
+    }
+    #logo1{
+        width:150px;
+        height:auto;
+        float:right;
+        padding:10px;
+    }
+    #header1{
+        float:left;
+        width:100%;
+        font-family:Brush Script MT;
+        font-size:400%;
+        text-align:center;
+        z-index:1;
+        background-color:rgba(40,115,75,0.86);
+        margin-bottom:-10px;
+        color:white;
+    }
+    .dpdnmain{
+        overflow:hidden;
+        float:right;
+    }
+    .dpdnmain a{
+        float:left;
+        font-size:16px;
+        color:white;
+        text-align: center;
+        padding:12px 16px;
+        text-decoration:none;
+    }
+    .dropdown{
+        font-size:16px;  
+        border:none;
+        outline:none;
+        color:white;
+        font-family:inherit;
+        float:left;
+        overflow:hidden;
+    }
+    .dropdown-content{
+        display:none;
+        position:absolute;
+        background-color:rgba(40,115,75,1);
+        min-width:2px;
+        box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index:2;
+    }
+    .dropdown-content a{
+        float:none;
+        color:white;
+        font-family:verdana;
+        font-size:87%;
+        background-color:rgba(40,115,75,1);
+        text-decoration:none;
+        display:block;
+        text-align:left;
+        z-index:2;
+    }
+    .dropdown-content a:hover{
+        background-color:rgba(100,205,100,1);
+        color:black;;
+    }
+    .dropdown:hover .dropdown-content{
+        display:block;
+    }
+    #navbar{
+        float:left;
+        width:100%;
+        font-family:verdana;
+        font-size:100%;
+        text-align:center;
+        z-index:1;
+    }
+    #navlist{
+        list-style-type:none;
+        margin-top:10px;
+        width:100%;
+        float:left;
+        padding:0;
+        overflow:hidden;
+        background-color:rgba(100,205,100,0.86);
+        border-top:2px solid black;
+    }
+    .navli{
+        float:left;
+        border-right:2px solid black;
+    }
+    .navlia{
+        display:block;
+        color:black;
+        text-align:center;
+        padding:16px;
+        text-decoration:none;
+        font-family:verdana;
+    }
+    .navaccount{
+        float:right;
+    }
+    .navlia:hover{
+        background-color:rgba(40,115,75,0.5);
+    }
+    li a:hover{
+        background-color:rgba(40,115,75,0.5);
+    }
+    #iconhover:hover{
+        background-color:rgba(100,205,100,0.5);
+    }
+    marquee{
+        background-color:rgba(40,115,75,0.86);
+        height:25px;
+        padding:2px;
+        margin-top:-16px;
+        font-family:verdana;
+        border-top:2px solid black;
+        color:orangered;
+    }
+    .contblock{
+        margin-top:0px;
+    }
+    .textcont{
+        width:60%;
+        float:left;
+         margin-top:50px;
+    }
+    .photocont{
+        width:40%;
+        float:left;
+    }
+    .photoprop{
+        width:auto;
+        height:300px;      
+        border:3px solid rgba(40,115,75,1);
+        padding:0px;
+        margin-left:50px;
+        margin-top:10px;
+    }
+    .heading{
+        margin-top:0px;
+        font-family:Verdana;
+        text-align:left;
+        opacity:0.9;
+        color:white;
+        background-color:rgba(40,115,75,0.9);
+        padding:16px;
+        margin-left:0px;
+
+    }
+    .parastyle{
+        opacity:1;
+        font-size:133%;
+        font-family:arial;
+        margin-top:-20px;
+        margin-left:15px;
+        color:black;
+    }
+    html{
+    scroll-behavior: smooth;
+    }
+    </style>
+    </head>
+
+<body onLoad="ovl();">
+<p>
+<div id="overlay"></div>
+</p>
+
+<p>
+<div id="header1">
+Orion Multispecialty Hospital
+<div style="float:right;">
+<img id="logo1" src="finalorionlogo.png" alt="Orion Logo">
+</div>
+<div class="dpdnmain">
+<div class="dropdown" style="margin:0px;">
+<a id="iconhover" href="#about" style="padding:0px;"><img id="usericon" src="usericon.png" alt="User" usemap="#userclick"></a>
+<div class="dropdown-content" style="margin-top:70px;">
+    <a href="Login Page.html">Login</a>
+    <a href="#">Signup</a>
+</div>
+</div>
+<!--map name="userclick">
+<area shape="circle" coords="40,40,30" alt="usericon" href="homepage.html">
+</map-->
+</div>
+</div>
+
+<p>
+<div id="navbar">
+<ul id="navlist">
+    <li class="navli" style="border-left:2px solid black;"><a class="navlia" href="homepage.html">Home</a></li>
+    <li class="navli"><a class="navlia" href="#about">About Us</a></li>
+    <li style="float:left;margin:-16px;">
+    <div class="dpdnmain" style="display:block;color:white;text-align:center;padding:16px;text-decoration:none;font-family:verdana;">
+    <div class="dropdown">
+    <a href="#about" style="padding:16px;color:black;border-right:2px solid black;">Services <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content" style="margin-top:50px;">
+        <a style="width:125%;" href="#orthopedics">Orthopedics</a>
+        <a style="width:125%;" href="#gynecology">Gynecology & Infertility</a>
+        <a style="width:125%;" href="#ivf">IVF</a>
+        <a style="width:125%;" href="#breastclinic">Breast Clinic</a>
+        <a style="width:125%;" href="#ent">ENT</a>
+        <a style="width:125%;" href="#paediatric">Paediatric</a>
+        <a style="width:125%;" href="#generalsurgery">General Surgery</a>
+        <a style="width:125%;" href="#orthopedics">Joint Replacement</a>
+        <a style="width:125%;" href="#physiotherapy">Physiotherapy</a>
+        <a style="width:125%;" href="#generalmedicines">General Medicines</a>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li class="navli"><a class="navlia" href="#team">International Patients</a></li>
+    <li class="navli"><a class="navlia" href="#contact">Hospitals</a></li>
+    <li class="navli"><a class="navlia" href="#team">Our Team</a></li>
+    <li class="navli"><a class="navlia" href="#contact">Contact Us</a></li>
+    <!--li class="navaccount"><a href="#signup">Signup</a></li>
+    <li class="navaccount"><a href="#login">Login</a></li-->
+</ul>
+</div>
+</p>
+
+<marquee><b>COVID-19 facilities available!</b></marquee>
+
+<div class="contblock">
+    <div style="margin-left:525px;margin-top:-285px;">
+        <h1>
+        <p style="margin-top:300px;font-family:Verdana;opacity:0.9;padding:16px;margin-left:0px;text-align:center;width:33%;background-color:rgba(100,205,100,0.86);color:black;border:2px solid black;">
+        Our Services
+        </p>
+        </h1>
+</div>
+
+<div class="contblock" style="margin-top:0px;" id="orthopedics">
+    <h2>
+    <p class="heading">
+    Orthopedics & Joint Replacement
+    </p>
+    </h2>
+    <br>
+    <p class="parastyle">
+    Joint Replacement is a surgery performed to relieve pain from Arthritic and damaged joint. In this damaged articular surface is replaced by artificial prosthesis. Joint prosthesis can be made up of Metal, Ceramic or Polyethylene. Knee and Hip are common joints which require Joint Replacement.
+    </p>
+    <div class="textcont">
+        <h3><p class="parastyle">Total Knee Replacement</p></h3>
+        <p class="parastyle">
+        Total Knee Replacement is operation performed to relieve pain in arthritic knee.
+        With increase in life expectancy, more number of senior citizen demand a better quality of life. A painful knee can seriously hamper a person’s capacity to walk freely and make him dependent not only on drugs to relieve pain but also on others for mobility. Knee replacement relieves pain in severe arthritis. It is commonly done in patients suffering from osteoarthritis and rheumatoid arthritis.
+        </p>
+        </div>
+    <div class="photocont">
+        <img class="photoprop" src="kneereplacement.jpg" alt="">
+    </div>
+    <div class="textcont">
+        <h3><p class="parastyle">Total Hip Replacement</p></h3>
+        <p class="parastyle">
+        Total Hip Replacement is well established treatment method to relieve pain from affected hip. It also significantly improves quality of life and mobility of patient.
+        In this procedure affected portions of joint i.e. Femoral head and acetabulum are replaced with artificial components to form new joint.
+        </p>
+    </div>
+    <div class="photocont">
+        <img class="photoprop" src="hipfracture2.jpg" alt="">
+    </div>
+</div>
+<div class="contblock" style="margin-top:675px;" id="gynecology">
+    <h2>
+    <p class="heading">
+    Gynecology & Infertility
+    </p>
+    </h2>
+    <br>
+    <p class="parastyle">
+    Orion IVF hospital is one of the top leading gynecologist’s hospitals in Pune. In this hospital, the most well-known gynecologist Dr. is working. Most of the place Orion has its branches which is very popular as the Best Gynecologist Clinic in Pune.
+    </p>
+    <div class="textcont">
+        <p class="parastyle">
+        Orion IVF hospitals have fulfilled so many dreams of various moms, who want to have a child but because of some reasons, they can’t fulfill their dream of becoming the mother of a child. In this hospital, advanced technology is used for working. They personally take care of all the things. All the faculty members are so good they also ready to help all their patients.
+        </p>
+        <br>
+        <p class="parastyle">
+        Gynecologists are a physician who specializes in treating diseases of the female reproductive organs & providing well women health care that focuses primarily on the reproductive organs. They deal with a wide range of issues, including obstetrics or pregnancy & childbirth, menstruation & fertility issues, sexually transmitted infection, hormone disorders & others. The doctors can assess many disorders of the reproductive system through examination. He or she can also conduct tests with blood & tissue cultures common women’s health problems includes endometriosis, fibroid tumors & cancer. These should be evaluated by doctors in gynecology for medicines & surgery & referred to a Gynecologist for treatment. Dilation& curettage, Hysterectomy, Optorectomy Tubal ligation, Hysteroscopy & laparoscopy are the common operations that gynecologists perform.
+        </p>
+        <br>
+        <p class="parastyle">
+        A gynecological examination is quite intimate, more so than a routine physical exam. Incontinence of urine, Amenorrhoea, Dysmenorrhoea, Infertility Menorrhagia, prolapsed of pelvic organs, infection of the vagina & premenstrual syndrome are the conditions deal with by Gynecologists may employ medical or surgical therapies depending on the exact nature of the problem that they are treating.
+        </p>
+    </div>
+    <div class="photocont">
+        <img class="photoprop" src="gynecologist.jpg" alt="">
+        <img class="photoprop" src="gynecologist2.jpg" alt="">
+    </div>
+</div>
+<div class="contblock" style="margin-top:675px;" id="ivf">
+    <h2>
+    <p class="heading">
+    IVF
+    </p>
+    </h2>
+    <br>
+    <p class="parastyle">
+    At our IVF Fertility Center in Pune, we know that treating infertility requires a full-circle approach. The IVF specialists and staff of IVF fertility center in Pune are a dedicated team of professionals who truly want the best outcome for you. Orion IVF Center Pune is an IVF fertility center in Pune that blends a visionary approach to personalizing fertility care with the most advanced assisted reproductive technologies.
+    </p>
+    <div class="textcont">
+        <p class="parastyle">
+        If you are searching for Best IVF Center in Pune, then Orion IVF Center Pune is the right place for you! Dr. Parag Hitnalikar is one of the reputed and affordable IVF Specialist Doctors in Pune. on are the best IVF Center in Pune with a highly accomplished team of IVF specialists, embryologists, and support staff. At our IVF Center in Pune, we know that IVF Treatment requires a full-circle approach. The IVF specialists and staff of the IVF center in Pune are a dedicated team of professionals who truly want to turn your hope into happiness.
+        </p>
+        <br>
+        <p class="parastyle">
+        The Orion IVF center in Pune provides comprehensive infertility services with warm care and counseling. Orion IVF center is an ivf fertility center in Pune that blends a visionary approach to personalizing fertility care with the most advanced assisted reproductive technologies. Orion IVF Center Pune is the most trusted IVF Center in Pune. Our treatment is delivered in a professional and caring environment by a team of IVF Specialist doctor in Pune
+        </p>
+        <br>
+        <p class="parastyle">
+        The best IVF doctors in Pune are playing an impactful role in helping couples achieving pregnancy with the help of IVF treatments in Pune. Orion IVF Center in Pune analyzes patient problems and offer them the most proper treatment. The Orion IVF Center in Pune ventures to provide the best IVF treatments to patients who require infertility treatments at an affordable cost. The services available at the IVF fertility center in Pune are treatments related to male and female infertility.
+        </p>
+        <br>
+        <p class="parastyle">
+        Pregnancy is the best stage for any lady. In any case, because of certain conditions, some can’t appreciate the joy of bearing a kid. Accuse the way of life and frenzied timetable, infertility has gotten extremely regular among couples. But you can easily figure out the solution once you come to know about the IVF facility of Orion IVF center in Pune.
+        </p>
+        <br>
+        <p class="parastyle">
+        Orion IVF center Pune is the best IVF center in Pune, India. Orion IVF has grasped the most recent technologies with the goal that each couple can appreciate the excellence of parenthood. The technologies that can control stress, time, and side effects at the same time, thus ensuring the best possible success rate in the field of IVF. It is the only IVF Center in Pune that provides the treatment after gaining pure insight into the patient’s medical history.
+        </p>
+        <br>
+        <p class="parastyle">
+        IVF stands for In vitro fertilization and it is conducted in a laboratory. In this procedure, the woman’s eggs are removed from her ovaries and furthermore fertilized with the man’s sperm. The embryos that are formed are then put into the woman’s uterus for pregnancy.IVF cycles are done with all the facilities under one roof by the best IVF Specialist Doctor in Pune. This is the reason we have the highest IVF success rate in western India. All the advanced technologies such as ICSI, rapid vitrification, blastocyst transfer, embryo hatching are available at our IVF center in Pune. All this at a very reasonable cost.
+        </p>
+    </div>
+    <div class="photocont">
+        <img class="photoprop" src="ivf1.jpg" alt="">
+        <img class="photoprop" src="ivf2.jpg" alt="">
+        <img class="photoprop" src="ivf3.jpg" alt="">
+    </div>
+</div>
+<div class="contblock" style="margin-top:1125px;" id="breastclinic">
+    <h2>
+    <p class="heading">
+    Breast Clinic
+    </p>
+    </h2>
+    <br>
+    <p class="parastyle">
+    Breast pain (mastalgia) can be described as tenderness, throbbing, sharp, stabbing, burning pain or tightness in the breast tissue. The pain may be constant or it may occur only occasionally, and it can occur in men, women and transgender people.
+    </p>
+    <div class="textcont">
+        <p class="parastyle">
+        Breast pain can range from mild to severe. It may occur:
+        </p>
+        <ul style="color:black;">
+        <li><p class="parastyle">Just a few days a month, in the two to three days leading up to a menstrual period. This normal, mild-to-moderate pain affects both breasts.</p></li>
+        <li><p class="parastyle">A week or longer each month, starting before a period and sometimes continuing through the menstrual cycle. The pain may be moderate or severe, and affects both breasts.</p></li>
+        <li><p class="parastyle">Throughout the month, not related to a menstrual cycle.</p></li>
+        </ul>
+    </div>
+    <div class="photocont">
+        <img class="photoprop" src="breastclinic.jpg" alt="">
+    </div>
+</div>
+<div class="contblock" style="margin-top:350px;" id="ent">
+    <h2>
+    <p class="heading">
+    ENT
+    </p>
+    </h2>
+    <br>
+    <p class="parastyle">
+    Department of ENT at Orion Hospital focuses on the treatment of ear, nose and throat conditions in adults and children. This will include problems in hearing and deafness, ringing in the ears, vertigo (dizziness), noses that are very stuffy or runny all the time, tonsil problems, cancers of the ENT areas etc.
+    </p>
+    <div class="textcont">
+        <h3><p class="parastyle">Facilities</p></h3>
+        <ul style="color:black;">
+        <p class="parastyle">
+        <li><p class="parastyle">OPD services by appointment.</p></li>
+        <li><p class="parastyle">Routine ENT Surgeries</p></li>
+        <li><p class="parastyle">Micro Ear, Laryngeal and Endoscopic nasal surgeries</p></li>
+        <li><p class="parastyle">Endoscopic DCR</p></li>
+        <li><p class="parastyle">Rhinolasty</p></li>
+        <li><p class="parastyle">Phonosurgeries, Surgeries for snoring etc.</p></li>
+        <li><p class="parastyle">Head & neck surgeries including thyroid and salivary gland</p></li>
+        </ul>
+    </div>
+    <div class="photocont">
+        <img class="photoprop" src="ent.jpg" alt="">
+    </div>
+</div>
+<div class="contblock" style="margin-top:350px;" id="paediatric">
+    <h2>
+    <p class="heading">
+    Paediatric
+    </p>
+    </h2>
+    <br>
+    <p class="parastyle">
+    We strive to provide quality healthcare to the little ones. The department is committed to clinical care, administration and quality management and well equipped to diagnose and treat simple and common, everyday illness as well as complex diseases.
+    </p>
+    <div class="textcont">
+        <p class="parastyle">
+        We understand that Paediatric care is just not about treating, it means providing answers and guidance throughout your child’s growth. That’s why we strive to build lasting, long-term relationships with parents so they can raise safe, healthy kids.
+        </p>
+        <br>
+        <h3><p class="parastyle">Child Care and Vaccination</p></h3>
+        <p class="parastyle">
+        Some of the General Paediatric services offered at the hospital include:
+        </p>
+        <ul style="color:black;">
+        <li><p class="parastyle">Prenatal consultations and counselling</p></li>
+        <li><p class="parastyle">Complete New born care Neonatology, Nutrition and dietary counselling</p></li>
+        <li><p class="parastyle">Care of illness supported by our specialty services including General Paediatrics</p></li>
+        <li><p class="parastyle">General Health check-up</p></li>
+        <li><p class="parastyle">Immunization (Vaccination)</p></li>
+        <li><p class="parastyle">All newborn care, phototherapy routine health check up, Birth defects</p></li>
+        <li><p class="parastyle">Childhood weight management</p></li>
+        <li><p class="parastyle">Childhood infections, Flu, etc.</p></li>
+        <li><p class="parastyle">Preventive Care, Suture/Laceration</p></li>
+        <li><p class="parastyle">Acute Injury and Illness Care</p></li>
+        <li><p class="parastyle">Asthma clinic , Allergy clinic</p></li>
+        <li><p class="parastyle">Counselling of Parents for common Behavioral problems, Bedwetting</p></li>
+        <li><p class="parastyle">Adolescent care.</p></li>
+        <li><p class="parastyle">Preventive Health care advocated through a series of awareness and wellness programs that we run from time to time</p></li>
+        </ul>
+    </div>
+    <div class="photocont">
+        <img class="photoprop" src="childcare.jpg" alt="">
+        <img class="photoprop" src="childcare2.jpg" alt="">
+    </div>
+</div>
+<div class="contblock" style="margin-top:675px;" id="generalsurgery">
+    <h2>
+    <p class="heading">
+    General Surgery
+    </p>
+    </h2>
+    <br>
+    <p class="parastyle">
+    We have doctors on our panel who are specialized in general surgery, oncosurgery, urosurgery, plastic surgery. They are readily available for appointments and emergency surgeries. We have three operation theatres in our hospital customized for different types of surgeries.
+    </p>
+    <div class="textcont">
+        <h3><p class="parastyle">GENERAL SURGERY SURGEON</p></h3>
+        <p class="parastyle">
+        General surgery is a surgical specialty that focuses on abdominal contents including esophagus, stomach, small intestine, large intestine, liver, pancreas, gallbladder, appendix and bile ducts, and often the thyroid gland.
+        </p>
+        <p class="parastyle">
+        These specialists primarily diagnose and treat GI diseases in both men and women. They perform endoscopic procedures, in which they use specialized instruments to view the GI tract and make a diagnosis. They don’t perform surgery. In some cases, they may work closely with a GI surgeon.
+        </p>
+        <br>
+        <h3><p class="parastyle">GASTRO SURGEON</p></h3>
+        <p class="parastyle">
+        These specialists primarily diagnose and treat GI diseases in both men and women. They perform endoscopic procedures, in which they use specialized instruments to view the GI tract and make a diagnosis. They don’t perform surgery. In some cases, they may work closely with a GI surgeon.
+        </p>
+        <br>
+        <h3><p class="parastyle">GALLBLADDER SURGEON</p></h3>
+        <p class="parastyle">
+        Taking the gallbladder out is usually the best way to treat gallbladder problems. You might get some relief from changing your diet. For example, eating less fat can help. But gallstones rarely go away on their own.
+        </p>
+    </div>
+    <div class="photocont">
+        <img class="photoprop" src="generalsurgery.jpg" alt="">
+        <img class="photoprop" src="generalsurgery2.jpg" alt="">
+    </div>
+</div>
+<div class="contblock" style="margin-top:675px;" id="physiotherapy">
+    <h2>
+    <p class="heading">
+    Physiotherapy
+    </p>
+    </h2>
+    <br>
+    <p class="parastyle">
+    Our vision is to be Pune’s leading physiotherapy practice by offering thorough assessment, hands-on treatment and appropriate rehabilitation to our patients so that they can return to pain-free and maximal function in their everyday activities.
+    </p>
+    <div class="textcont">
+        <h3><p class="parastyle">Treatments</p></h3>
+        <ul style="color:black;">
+        <p class="parastyle">
+        <li><p class="parastyle">Headaches</p></li>
+        <li><p class="parastyle">Postral aches and pains</p></li>
+        <li><p class="parastyle">Back and neck injuries</p></li>
+        <li><p class="parastyle">Stress related conditions and pain</p></li>
+        <li><p class="parastyle">Arthritis or degenerative conditions</p></li>
+        <li><p class="parastyle">Chronic pain</p></li>
+        <li><p class="parastyle">Sinusitus</p></li>
+        <li><p class="parastyle">Respiratory conditions</p></li>
+        <li><p class="parastyle">Jaw Dysfunctions (TMJ)</p></li>
+        <li><p class="parastyle">Orthopaedic conditions</p></li>
+        <li><p class="parastyle">Sport injuries</p></li>
+        </ul>
+    </div>
+    <div class="photocont">
+        <img class="photoprop" src="Physiotherapy.jpg" alt="">
+    </div>
+</div>
+<div class="contblock" style="margin-top:425px;" id="generalmedicines">
+    <h2>
+    <p class="heading">
+    General Medicines
+    </p>
+    </h2>
+    <br>
+    <p class="parastyle">
+    Orion Hospital provides outpatient services, round the clock emergency, ICU services and regular inpatient services. We have expert and experienced MD Medicine Doctor in our hospital.
+    </p>
+    <div class="textcont">
+        <h3><p class="parastyle">Specialties</p></h3>
+        <ul style="color:black;">
+        <p class="parastyle">
+        <li><p class="parastyle">Endotracheal Intubation</p></li>
+        <li><p class="parastyle">Central venous catheter insertion</p></li>
+        <li><p class="parastyle">Intercostal drainage tube insertion</p></li>
+        <li><p class="parastyle">Pleural effusion tapping</p></li>
+        <li><p class="parastyle">Ascitis tapping/p></li>
+        <li><p class="parastyle">Bone marrow aspiration and biopsy</p></li>
+        <li><p class="parastyle">Temporary pacemaker insertion</p></li>
+        <li><p class="parastyle">Foleys catheter and ryle’s tube insertion</p></li>
+        <li><p class="parastyle">Treatment of crit</p></li>
+        </ul>
+    </div>
+    <div class="photocont">
+        <img class="photoprop" src="generalmedicines.jpg" alt="">
+    </div>
+</div>
+</body>
+</html>
+
