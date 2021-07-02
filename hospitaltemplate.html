@@ -154,7 +154,7 @@
         color:orangered;
     }
     html{
-    scroll-behavior: smooth;
+        scroll-behavior: smooth;
     }
     .footer{
         background-color:rgba(40,115,75,0.9);
@@ -162,71 +162,125 @@
         text-align:center;
         margin:-7.75px;
         margin-top:350px;
+        height:200px;
+    }
+    .footercont{
+        float:left;
+        margin-top:0px;
+        font-family:Verdana;
+        opacity:0.9;
+        padding:16px;
+        text-align:center;
+        width:20%;
+    }
+    .footerheading{
+        font-family:Verdana;
+        opacity:0.9;
+        padding:16px;
+        text-align:center;
+        width:75%;
+        background-color:rgba(100,205,100,0.86);
+        color:black;
+        border:2px solid black;
+        margin-top:0px;
+    }
+    .footertext{
+        width:90%;
+        text-align:center;
     }
     </style>
     </head>
 
 <body onLoad="ovl();">
-    <p>
-    <div id="overlay"></div>
-    </p>
+<p>
+<div id="overlay"></div>
+</p>
 
-    <p>
-    <div id="header1">
-    Orion Multispecialty Hospital
-    <div class="dpdnmain">
-    <div class="dropdown" style="margin:0px;">
-    <a id="iconhover" href="#about" style="padding:0px;"><img id="usericon" src="usericon.png" alt="User" usemap="#userclick"></a>
-    <div class="dropdown-content" style="margin-top:70px;">
-        <a href="Login Page.html">Login</a>
-        <a href="hospitalForm.html">Signup</a>
-    </div>
-    </div>
-    <!--map name="userclick">
-    <area shape="circle" coords="40,40,30" alt="usericon" href="homepage.html">
-    </map-->
-    </div>
-    <div style="float:right;">
-    <img id="logo1" src="finalorionlogo.png" alt="Orion Logo">
-    </div>
-    </div>
+<p>
+<div id="header1">
+Orion Multispecialty Hospital
+<div class="dpdnmain">
+<div class="dropdown" style="margin:0px;">
+<a id="iconhover" href="#about" style="padding:0px;"><img id="usericon" src="usericon.png" alt="User" usemap="#userclick"></a>
+<div class="dropdown-content" style="margin-top:70px;">
+    <a href="Login Page.html">Login</a>
+    <a href="hospitalForm.html">Signup</a>
+</div>
+</div>
+<!--map name="userclick">
+<area shape="circle" coords="40,40,30" alt="usericon" href="homepage.html">
+</map-->
+</div>
+<div style="float:right;">
+<img id="logo1" src="finalorionlogo.png" alt="Orion Logo">
+</div>
+</div>
 
-    <p>
-    <div id="navbar">
-    <ul id="navlist">
-        <li class="navli" style="border-left:2px solid black;"><a class="navlia" href="homepage.html">Home</a></li>
-        <li class="navli"><a class="navlia" href="aboutus.html">About Us</a></li>
-        <li style="float:left;margin:-16px;">
-        <div class="dpdnmain" style="display:block;color:white;text-align:center;padding:16px;text-decoration:none;font-family:verdana;">
-        <div class="dropdown">
-        <a href="services.html" style="padding:16px;color:black;border-right:2px solid black;">Services <i class="fa fa-caret-down"></i></a>
-        <div class="dropdown-content" style="margin-top:50px;">
-            <a style="width:125%;" href="services.html#orthopedics">Orthopedics</a>
-            <a style="width:125%;" href="services.html#gynecology">Gynecology & Infertility</a>
-            <a style="width:125%;" href="services.html#ivf">IVF</a>
-            <a style="width:125%;" href="services.html#breastclinic">Breast Clinic</a>
-            <a style="width:125%;" href="services.html#ent">ENT</a>
-            <a style="width:125%;" href="services.html#paediatric">Paediatric</a>
-            <a style="width:125%;" href="services.html#generalsurgery">General Surgery</a>
-            <a style="width:125%;" href="services.html#orthopedics">Joint Replacement</a>
-            <a style="width:125%;" href="services.html#physiotherapy">Physiotherapy</a>
-            <a style="width:125%;" href="services.html#generalmedicines">General Medicines</a>
+<p>
+<div id="navbar">
+<ul id="navlist">
+    <li class="navli" style="border-left:2px solid black;"><a class="navlia" href="homepage.html">Home</a></li>
+    <li class="navli"><a class="navlia" href="aboutus.html">About Us</a></li>
+    <li style="float:left;margin:-16px;">
+    <div class="dpdnmain" style="display:block;color:white;text-align:center;padding:16px;text-decoration:none;font-family:verdana;">
+    <div class="dropdown">
+    <a href="services.html" style="padding:16px;color:black;border-right:2px solid black;">Services <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content" style="margin-top:50px;">
+        <a style="width:125%;" href="services.html#orthopedics">Orthopedics</a>
+        <a style="width:125%;" href="services.html#gynecology">Gynecology & Infertility</a>
+        <a style="width:125%;" href="services.html#ivf">IVF</a>
+        <a style="width:125%;" href="services.html#breastclinic">Breast Clinic</a>
+        <a style="width:125%;" href="services.html#ent">ENT</a>
+        <a style="width:125%;" href="services.html#paediatric">Paediatric</a>
+        <a style="width:125%;" href="services.html#generalsurgery">General Surgery</a>
+        <a style="width:125%;" href="services.html#orthopedics">Joint Replacement</a>
+        <a style="width:125%;" href="services.html#physiotherapy">Physiotherapy</a>
+        <a style="width:125%;" href="services.html#generalmedicines">General Medicines</a>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li class="navli"><a class="navlia" href="#team">International Patients</a></li>
+    <li class="navli"><a class="navlia" href="#contact">Hospitals</a></li>
+    <li class="navli"><a class="navlia" href="#team">Our Team</a></li>
+    <li class="navli"><a class="navlia" href="#contact">Contact Us</a></li>
+    <!--li class="navaccount"><a href="#signup">Signup</a></li>
+    <li class="navaccount"><a href="#login">Login</a></li-->
+</ul>
+</div>
+</p>
+
+<marquee><b>COVID-19 facilities available!</b></marquee>
+
+<br>
+<div class="footer">
+    <div style="margin-left:0px;margin-top:0px;">
+        <div class="footercont" style="margin-left:15px;border-right:2px solid black;">    
+            <h3 class="footerheading">Orion Hospital</h3>
+            <div class="footertext">
+            Orion Hospital is managed by a team of highly experienced and well qualified doctors. So you always get the best treatment.
+            </div>
         </div>
+        <div class="footercont" style="margin-left:30px;border-right:2px solid black;">
+            <h3 class="footerheading">Address</h3>
+            <div class="footertext">
+            201 & 301, Akruti Avenue, S.No. 173, 201, Shankar Kalat Nagar, Thergaon Datta Mandir Road, Wakad
+            </div>
         </div>
+        <div class="footercont" style="margin-left:30px;border-right:2px solid black;">
+            <h3 class="footerheading">Contact No.</h3>
+            <div class="footertext">
+            +919075745067, +918983860330, +916356824461, +917887899339, +917972385355
+            </div>
         </div>
-        </li>
-        <li class="navli"><a class="navlia" href="#team">International Patients</a></li>
-        <li class="navli"><a class="navlia" href="#contact">Hospitals</a></li>
-        <li class="navli"><a class="navlia" href="#team">Our Team</a></li>
-        <li class="navli"><a class="navlia" href="#contact">Contact Us</a></li>
-        <!--li class="navaccount"><a href="#signup">Signup</a></li>
-        <li class="navaccount"><a href="#login">Login</a></li-->
-    </ul>
+        <div class="footercont" style="margin-left:30px;">
+            <h3 class="footerheading">Email</h3>
+            <div class="footertext">
+            orionhospital@gmail.com
+            </div>
+        </div>
     </div>
-    </p>
-
-    <marquee><b>COVID-19 facilities available!</b></marquee>
-
+</div>
 </body>
 </html>
 
