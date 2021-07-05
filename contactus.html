@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Contact Us - Orion Hospital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+    function ovl(){
+    document.getElementById("overlay").style.display = "block";
+    }
+    </script>
+    <style>
+    body{
+        background-image:url('bggreen2.jpg');
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-attachment:fixed; 
+        color:white;
+    }
+    #overlay{
+        position:fixed;
+        display:none;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color:rgba(0,0,0,0.15);
+        z-index:-5;
+    }
+    #usericon{
+        width:55px;
+        height:auto;
+        padding:10px;
+        z-index:1;
+        float:right;
+    }
+    #logo1{
+        width:150px;
+        height:auto;
+        float:right;
+        padding:10px;
+    }
+    #header1{
+        float:left;
+        width:100%;
+        font-family:Brush Script MT;
+        font-size:400%;
+        text-align:center;
+        z-index:1;
+        background-color:rgba(40,115,75,0.86);
+        margin-bottom:-10px;
+        color:white;
+    }
+    .dpdnmain{
+        overflow:hidden;
+        float:right;
+    }
+    .dpdnmain a{
+        float:left;
+        font-size:16px;
+        color:white;
+        text-align: center;
+        padding:12px 16px;
+        text-decoration:none;
+    }
+    .dropdown{
+        font-size:16px;  
+        border:none;
+        outline:none;
+        color:white;
+        font-family:inherit;
+        float:left;
+        overflow:hidden;
+    }
+    .dropdown-content{
+        display:none;
+        position:absolute;
+        background-color:rgba(40,115,75,1);
+        min-width:2px;
+        box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index:2;
+    }
+    .dropdown-content a{
+        float:none;
+        color:white;
+        font-family:verdana;
+        font-size:87%;
+        background-color:rgba(40,115,75,1);
+        text-decoration:none;
+        display:block;
+        text-align:left;
+        z-index:2;
+    }
+    .dropdown-content a:hover{
+        background-color:rgba(100,205,100,1);
+        color:black;;
+    }
+    .dropdown:hover .dropdown-content{
+        display:block;
+    }
+    #navbar{
+        float:left;
+        width:100%;
+        font-family:verdana;
+        font-size:100%;
+        text-align:center;
+        z-index:1;
+    }
+    #navlist{
+        list-style-type:none;
+        margin-top:10px;
+        width:100%;
+        float:left;
+        padding:0;
+        overflow:hidden;
+        background-color:rgba(100,205,100,0.86);
+        border-top:2px solid black;
+    }
+    .navli{
+        float:left;
+        border-right:2px solid black;
+    }
+    .navlia{
+        display:block;
+        color:black;
+        text-align:center;
+        padding:16px;
+        text-decoration:none;
+        font-family:verdana;
+    }
+    .navaccount{
+        float:right;
+    }
+    .navlia:hover{
+        background-color:rgba(40,115,75,0.5);
+    }
+    li a:hover{
+        background-color:rgba(40,115,75,0.5);
+    }
+    #iconhover:hover{
+        background-color:rgba(100,205,100,0.5);
+    }
+    marquee{
+        background-color:rgba(40,115,75,0.86);
+        height:25px;
+        padding:2px;
+        margin-top:-16px;
+        font-family:verdana;
+        border-top:2px solid black;
+        color:orangered;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    .footer{
+        background-color:rgba(40,115,75,0.9);
+        padding:10px;
+        text-align:center;
+        margin:-7.75px;
+        margin-top:570px;
+        height:200px;
+    }
+    .footercont{
+        float:left;
+        margin-top:0px;
+        font-family:Verdana;
+        opacity:0.9;
+        padding:16px;
+        text-align:center;
+        width:20%;
+    }
+    .footerheading{
+        font-family:Verdana;
+        opacity:0.9;
+        padding:16px;
+        text-align:center;
+        width:75%;
+        background-color:rgba(100,205,100,0.86);
+        color:black;
+        border:2px solid black;
+        margin-top:0px;
+    }
+    .footertext{
+        width:90%;
+        text-align:center;
+    }
+    .contactinfo{
+        background-color:rgba(40,115,75,0.9);
+        padding:10px;
+        text-align:center;
+        width:37%;
+        float:left;
+        color:white;
+    }
+    .contactenter{
+        background-color:rgba(100,205,100,0.86);
+        padding:10px;
+        text-align:center;
+        width:45%;
+        float:left;
+        margin-left:60px;
+        color:black;
+    }
+    .parastyle{
+        opacity:1;
+        font-size:100%;
+        font-family:Arial;
+    }
+    .miniicon{
+        height:70px;
+    }
+    .icondiv{
+        width:100%;
+    }
+    .iconimg{
+        float:left;
+        width:15%;
+        padding:5px;
+    }
+    .iconcontent{
+        float:left;
+        width:71%;
+        padding:10px;
+        text-align:left;
+        margin-top:-10px;
+    }
+    .inputfields{
+        width:60%;
+        padding:16px;
+        border:1px solid black;
+        margin-bottom:16px;
+        box-sizing:border-box;
+        background-color:rgba(255,255,255,0.5);
+        color:black;
+        font-size:100%;
+    }
+    input[type="submit"]{
+        width:45%;
+        padding:16px;
+        background-color:rgba(40,115,75,0.9);
+        box-shadow:0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        border:2px solid black;
+        box-sizing:border-box;
+        cursor:pointer;
+        font-weight:bold;
+        color:white;
+    }
+    ::placeholder{
+        color: black;
+    }
+    </style>
+    </head>
+
+<body onLoad="ovl();">
+<p>
+<div id="overlay"></div>
+</p>
+
+<p>
+<div id="header1">
+Orion Multispecialty Hospital
+<div class="dpdnmain">
+<div class="dropdown" style="margin:0px;">
+<a id="iconhover" href="#about" style="padding:0px;"><img id="usericon" src="usericon.png" alt="User" usemap="#userclick"></a>
+<div class="dropdown-content" style="margin-top:70px;">
+    <a href="Login Page.html">Login</a>
+    <a href="hospitalForm.html">Signup</a>
+</div>
+</div>
+<!--map name="userclick">
+<area shape="circle" coords="40,40,30" alt="usericon" href="homepage.html">
+</map-->
+</div>
+<div style="float:right;">
+<img id="logo1" src="finalorionlogo.png" alt="Orion Logo">
+</div>
+</div>
+
+<p>
+<div id="navbar">
+<ul id="navlist">
+    <li class="navli" style="border-left:2px solid black;"><a class="navlia" href="homepage.html">Home</a></li>
+    <li class="navli"><a class="navlia" href="aboutus.html">About Us</a></li>
+    <li style="float:left;margin:-16px;">
+    <div class="dpdnmain" style="display:block;color:white;text-align:center;padding:16px;text-decoration:none;font-family:verdana;">
+    <div class="dropdown">
+    <a href="services.html" style="padding:16px;color:black;border-right:2px solid black;">Services <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content" style="margin-top:50px;">
+        <a style="width:125%;" href="services.html#orthopedics">Orthopedics</a>
+        <a style="width:125%;" href="services.html#gynecology">Gynecology & Infertility</a>
+        <a style="width:125%;" href="services.html#ivf">IVF</a>
+        <a style="width:125%;" href="services.html#breastclinic">Breast Clinic</a>
+        <a style="width:125%;" href="services.html#ent">ENT</a>
+        <a style="width:125%;" href="services.html#paediatric">Paediatric</a>
+        <a style="width:125%;" href="services.html#generalsurgery">General Surgery</a>
+        <a style="width:125%;" href="services.html#orthopedics">Joint Replacement</a>
+        <a style="width:125%;" href="services.html#physiotherapy">Physiotherapy</a>
+        <a style="width:125%;" href="services.html#generalmedicines">General Medicines</a>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li class="navli"><a class="navlia" href="#team">International Patients</a></li>
+    <li class="navli"><a class="navlia" href="#contact">Hospitals</a></li>
+    <li class="navli"><a class="navlia" href="ourteam.html">Our Team</a></li>
+    <li class="navli"><a class="navlia" href="#contact">Contact Us</a></li>
+    <!--li class="navaccount"><a href="#signup">Signup</a></li>
+    <li class="navaccount"><a href="#login">Login</a></li-->
+</ul>
+</div>
+</p>
+
+<marquee><b>COVID-19 facilities available!</b></marquee>
+
+<div style="margin-top:25px;margin-left:120px;width:90%,">
+    <div class="contactinfo">
+        <h2>
+        <p class="parastyle" style="font-family:Verdana;">Our medical specialists care about you & your family’s health</p>
+        </h2>
+        <p class="parastyle" style="border-bottom:2px solid black;padding-bottom:10px;">Book a Complimentary Appointment by Visiting or calling Us!</p>
+        <div class="icondiv" style="margin-top:0px;">
+            <div class="iconimg">
+                <img class="miniicon" src="icon13.png" alt="">
+            </div>
+            <div class="iconcontent">
+                <p class="parastyle">
+                301, Akruti Avenue, S.No. 173, 201, Shankar Kalat Nagar, Thergaon, 
+                Datta Mandir Road, Wakad
+                </p>
+            </div>
+        </div>
+        <div class="icondiv" style="margin-top:0px;">
+            <div class="iconimg">
+                <img class="miniicon" src="icon14.png" alt="">
+            </div>
+            <div class="iconcontent">
+                <p class="parastyle">
+                info@orionhospitalpune.com
+                </p>
+            </div>
+        </div>
+        <div class="icondiv" style="margin-top:210px;">
+            <div class="iconimg">
+                <img class="miniicon" src="icon15.png" alt="">
+            </div>
+            <div class="iconcontent">
+                <p class="parastyle">
+                +919075745067, +918983860330, +916356824461, +917887899339, +917972385355
+                </p>
+            </div>
+        </div>
+        <div class="icondiv" style="margin-top:0px;">
+            <div class="iconimg">
+                <img class="miniicon" src="icon16.png" alt="">
+            </div>
+            <div class="iconcontent">
+                <p class="parastyle">
+                Sun - Sat: 24 X 7
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="contactenter">
+        <h2>
+        <p class="parastyle" style="font-family:Verdana;">Book an Appointment</p>
+        </h2>
+        <p class="parastyle" style="border-bottom:2px solid black;padding-bottom:10px;">We offer extensive medical procedures to outbound and inbound patients what it is and we are very proud of achieve patients for recovery</p>
+        <form action="auth" method="POST" style="margin-top:40px;">
+            <input class="inputfields" style="height:40px;" autocomplete="off" type="text" name="yourname" placeholder="Your Name" required>
+            <input class="inputfields" style="height:40px;" autocomplete="off" type="text" name="phonenumber" placeholder="Phone Number" required>
+            <input class="inputfields" style="height:40px;" autocomplete="off" type="text" name="email" placeholder="Email" required>
+            <textarea class="inputfields" style="height:100px;font-family:Arial;" autocomplete="off" type="text" name="message" placeholder="Message" required></textarea>
+            <input class="inputfields" type="submit" value="Send Message!">
+        </form>
+    </div>
+</div>
+
+<br>
+<div class="footer">
+    <div style="margin-left:0px;margin-top:0px;">
+        <div class="footercont" style="margin-left:15px;border-right:2px solid black;">    
+            <h3 class="footerheading">Orion Hospital</h3>
+            <div class="footertext">
+            Orion Hospital is managed by a team of highly experienced and well qualified doctors. So you always get the best treatment.
+            </div>
+        </div>
+        <div class="footercont" style="margin-left:30px;border-right:2px solid black;">
+            <h3 class="footerheading">Address</h3>
+            <div class="footertext">
+            201 & 301, Akruti Avenue, S.No. 173, 201, Shankar Kalat Nagar, Thergaon Datta Mandir Road, Wakad
+            </div>
+        </div>
+        <div class="footercont" style="margin-left:30px;border-right:2px solid black;">
+            <h3 class="footerheading">Contact No.</h3>
+            <div class="footertext">
+            +919075745067, +918983860330, +916356824461, +917887899339, +917972385355
+            </div>
+        </div>
+        <div class="footercont" style="margin-left:30px;">
+            <h3 class="footerheading">Email</h3>
+            <div class="footertext">
+            orionhospital@gmail.com
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
