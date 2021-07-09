@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿
+
+
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Login Page - Orion Hospital</title>
@@ -6,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
-    function ovl(){
-    document.getElementById("overlay").style.display = "block";
-    }
-    </script>
+        function ovl(){
+        document.getElementById("overlay").style.display = "block";
+        }
+        </script>
     <style>
         .login-form {
             width: 350px;
@@ -295,8 +298,20 @@ Orion Multispecialty Hospital
     <form action="auth" method="POST">
         <input class="inputfields" autocomplete="off" type="text" name="username" placeholder="Username" required>
         <input class="inputfields" type="password" name="password" placeholder="Password" required>
-        <input class="inputfields" type="submit">
+        <input class="inputfields" type="button" onclick="check(this.form)" value="Login"/>
+        <input type="reset" value="Cancel"/>
     </form>
+    <script language="javascript">
+        function check(form) { /*function to check userid & password*/
+            /*the following code checkes whether the entered userid and password are matching*/
+            if(form.username.value == "Parth" && form.password.value == "1234") {
+                window.open('home.html')/*opens the target page while Id & password matches*/
+            }
+            else {
+                window.open('Login Page.html')/*displays error message*/
+            }
+        }
+    </script>
 </div>
 
 <br>
