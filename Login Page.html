@@ -42,9 +42,19 @@
         ::placeholder{
             color: black;
         }
-        .login-form input[type="submit"] {
+        .login-form input[type="button"] {
             width: 100%;
             padding: 16px;
+            background-color: rgba(100,205,100,0.86);
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+            border: 2px solid black;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-weight: bold;
+            color: black;
+        }
+        .login-form input[type="reset"] {
+            padding: 6px;
             background-color: rgba(100,205,100,0.86);
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
             border: 2px solid black;
@@ -299,13 +309,13 @@ Orion Multispecialty Hospital
         <input class="inputfields" autocomplete="off" type="text" name="username" placeholder="Username" required>
         <input class="inputfields" type="password" name="password" placeholder="Password" required>
         <input class="inputfields" type="button" onclick="check(this.form)" value="Login"/>
-        <input type="reset" value="Cancel"/>
+        <input type="reset" value="Reset"/>
     </form>
     <script language="javascript">
         function check(form) { /*function to check userid & password*/
             /*the following code checkes whether the entered userid and password are matching*/
             if(form.username.value == "Parth" && form.password.value == "1234") {
-                window.open('home.html')/*opens the target page while Id & password matches*/
+                window.open('home.html',"_self")/*opens the target page while Id & password matches*/
             }
             else {
                 window.open('Login Page.html')/*displays error message*/

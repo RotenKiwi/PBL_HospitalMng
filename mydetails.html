@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Registration Page - Orion Hospital</title>
+    <title>My Details - Orion Hospital</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -170,6 +170,7 @@
         background-color:rgba(100,205,100,0.86);
         padding:5px;
         color:black;
+        font-weight:bold;
         font-size:90%;
     }
     .selectdrop{
@@ -226,6 +227,9 @@
         width:90%;
         text-align:center;
     }
+    ::placeholder{
+        color: black;
+    }
     </style>
     </head>
 
@@ -240,9 +244,11 @@
     <div class="dpdnmain">
     <div class="dropdown" style="margin:0px;">
     <a id="iconhover" href="#about" style="padding:0px;"><img id="usericon" src="usericon.png" alt="User" usemap="#userclick"></a>
-    <div class="dropdown-content" style="margin-top:70px;">
-        <a href="Login Page.html">Login</a>
-        <a href="hospitalForm.html">Signup</a>
+    <div class="dropdown-content" style="margin-top:70px;margin-left:-66px;">
+        <a href="mydetails.html">My Details</a>
+        <a>Appointments</a>
+        <a>Upcoming Visits</a>
+        <a>My Doctors</a>
     </div>
     </div>
     <!--map name="userclick">
@@ -299,113 +305,75 @@
 
         <tr>
             <td colspan="3" style="border-bottom:2px solid black;">
-                <center><h3 style="font-family:calibri;"><font size=6><b>HOSPITAL REGISTRATION FORM</b></h3></font></center>
+                <center><h3 style="font-family:calibri;"><font size=6><b>My Details</b></h3></font></center>
             </td>
         </tr>
 
         <tr>
             <td> Patient's Name</td>
-            <td><input class="inputfields" type="text" name="textnames" id="textname" size="30"></td>
+            <td><input class="inputfields" type="text" name="textnames" id="textname" size="30" value="Parth Joshi" readonly></td>
         </tr>
 
         <tr>
             <td>Father's Name</td>
-            <td><input class="inputfields" type="text" name="fathername" id="fathername" size="30"></td>
+            <td><input class="inputfields" type="text" name="fathername" id="fathername" size="30" value="Chetan Joshi" readonly></td>
         </tr>
 
         <tr>
             <td>Address</td>
-            <td><input class="inputfields" type="text" name="Paddress" id="Paddress" size="30"></td>
+            <td><textarea class="inputfields" style="height:100px;font-family:Arial;" autocomplete="off" type="text" name="Paddress" rows="1" cols="32" placeholder="44/8, B, Andheri Greenfields Co-op Hsg Socy Ltd, Mapkhan Nagar, Behind Marol Fire Brigade, Marol Nak" readonly></textarea></td>
         </tr>
 
         <tr>
             <td>Sex</td>
-            <td><input type="radio" name="sex" Value="Male" size="10">Male
-                <input type="radio" name="sex" Value="Female" size="10">Female
-                <input type="radio" name="sex" Value="Other" size="10">Other
+            <td><input class="inputfields" type="text" name="sex" id="sex" size="30" value="Male" readonly></td>
         </tr>
 
         <td>State</td>
-        <td><select class="selectdrop" Name="State">
-        <option Value="-1 selected">Select</option>
-        <option value="Maharastra">Maharastra</option>
-        <option value="Other">Other</option>
-        </SELECT></TD>
+        <td><input class="inputfields" type="text" name="state" id="state" size="30" value="Maharashtra" readonly></td>
     </tr>
 
 
         <td>District</td>
-        <td><select class="selectdrop" Name="District">
-        <option Value="-1 selected">Select</option>
-        <option value="Akola">Akola</option>
-        <option value="Aurangabad">Aurangabad</option>
-        <option value="Thane">Thane</option>
-        <option value="Satara">Satara</option>
-        <option value="Wardha">Wardha</option>
-        <option value="Haveli">Haveli</option>
-        <option value="Pune City">Pune City</option>
-        <option value="Mumbai City">Mumbai City</option>
-        <option value="Other">Other</option>
-        </SELECT></TD>
+        <td><input class="inputfields" type="text" name="district" id="district" size="30" value="Pune City" readonly></td>
     </tr>
 
 
     <td>City</td>
-    <td><select class="selectdrop" Name="City">
-    <option Value="-1 selected">Select</option>
-    <option value="Nagpur">Nagpur</option>
-    <option value="Mumbai">Mumbai</option>
-    <option value="Pune">Pune</option>
-    <option value="Nashik">Nashik</option>
-    <option value="Solapur">Solapur</option>
-    <option value="Aurangabad">Aurangabad</option>
-    <option value="Other">Other</option>
-    </SELECT></TD>
+    <td><input class="inputfields" type="text" name="city" id="city" size="30" value="Pune" readonly></td>
 </tr>
 
 <tr>
 <td>Pincode</td>
-<td><input class="inputfields" type="text" name="Pincode" id="pincode" size="30"></td>  
+<td><input class="inputfields" type="text" name="Pincode" id="pincode" size="30" value="411005" readonly></td>  
 
 
 <tr>
   <td>Reason of Registration</td>
-    <td><select class="selectdrop" Name="Reason of Registration">
-    <option Value="-1 selected">Select</option>
-    <option value="Concussion">Concussion</option>
-    <option value="Fracture">Fracture</option>
-    <option value="Monthly Checkup">Monthly Checkup</option>
-    <option value="Scan">Scan</option>
-    <option value="Blood Test">Blood Test</option>
-    <option value="Other">Other</option>
-    </SELECT></TD>
+    <td><input class="inputfields" type="text" name="reason" id="reason" size="30" value="Monthly Checkup" readonly></td> 
 </tr>
 
 <tr>
 <td>Email ID</td>
-<td><input class="inputfields" type="text" name="email id" id="email id" size="30"></td>
+<td><input class="inputfields" type="text" name="email id" id="email id" size="30" value="parthjoshi@gmail.com" readonly></td>
 </tr>
 
 
 <tr>
 <td>D.O.B.</td>
-<td><input class="selectdrop" type="date" name="dob" id="dob" size="30"></td>
+<td><input class="inputfields" type="text" name="dob" id="dob" size="30" value="02/01/2002" readonly></td>
 </tr>
 <tr>
 
 
  <td>Mobile No.</td>
-<td><input class="inputfields" type="text" name="Mobile No" id="Mobile No" size="30"></td>
+<td><input class="inputfields" type="text" name="Mobile No" id="Mobile No" size="30" value="987654321" readonly></td>
 </tr>
 
 <td>Contact (In Case Of Emergency)</td>
-<td><input class="inputfields" type="text" name="Mobile No" id="Mobile No" size="30"></td>
+<td><input class="inputfields" type="text" name="Mobile No" id="Mobile No" size="30" value="987654321" readonly></td>
 </tr>
 
-<tr>
-<td><input class="databuttons" type="reset"></td>
-<td colspan="2"><input class="databuttons" type="Submit" value="Next"></td>
-</tr>
 </table>
 </form>
 <br>
