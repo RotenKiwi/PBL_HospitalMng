@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Homepage - Orion Hospital</title>
+    <head>
+    <title>International Patients - Orion Hospital</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -9,7 +9,6 @@
     function ovl(){
     document.getElementById("overlay").style.display = "block";
     }
-
     </script>
     <style>
     body{
@@ -54,6 +53,53 @@
         background-color:rgba(40,115,75,0.86);
         margin-bottom:-10px;
         color:white;
+    }
+    .dpdnmain{
+        overflow:hidden;
+        float:right;
+    }
+    .dpdnmain a{
+        float:left;
+        font-size:16px;
+        color:white;
+        text-align: center;
+        padding:12px 16px;
+        text-decoration:none;
+    }
+    .dropdown{
+        font-size:16px;  
+        border:none;
+        outline:none;
+        color:white;
+        font-family:inherit;
+        float:left;
+        overflow:hidden;
+    }
+    .dropdown-content{
+        display:none;
+        position:absolute;
+        background-color:rgba(40,115,75,1);
+        min-width:2px;
+        box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index:2;
+    }
+    .dropdown-content a{
+        float:none;
+        color:white;
+        font-family:verdana;
+        font-size:87%;
+        background-color:rgba(40,115,75,1);
+        text-decoration:none;
+        display:block;
+        text-align:left;
+        z-index:2;
+    }
+    .dropdown-content a:hover{
+        background-color:rgba(100,205,100,1);
+        color:black;;
+    }
+    .dropdown:hover .dropdown-content{
+        display:block;
     }
     #navbar{
         float:left;
@@ -106,94 +152,15 @@
         border-top:2px solid black;
         color:orangered;
     }
-    .dpdnmain{
-        overflow:hidden;
-        float:right;
-    }
-    .dpdnmain a{
-        float:left;
-        font-size:16px;
-        color:white;
-        text-align: center;
-        padding:12px 16px;
-        text-decoration:none;
-    }
-    .dropdown{
-        font-size:16px;  
-        border:none;
-        outline:none;
-        color:white;
-        font-family:inherit;
-        float:left;
-        overflow:hidden;
-    }
-    .dropdown-content{
-        display:none;
-        position:absolute;
-        background-color:rgba(40,115,75,1);
-        min-width:2px;
-        box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index:2;
-    }
-    .dropdown-content a{
-        float:none;
-        color:white;
-        font-family:verdana;
-        font-size:87%;
-        background-color:rgba(40,115,75,1);
-        text-decoration:none;
-        display:block;
-        text-align:left;
-        z-index:2;
-    }
-    .dropdown-content a:hover{
-        background-color:rgba(100,205,100,1);
-        color:black;
-    }
-    .dropdown:hover .dropdown-content{
-        display:block;
-    }
-    .parastyle{
-        opacity:1;
-        font-size:133%;
-        font-family:arial;
-    }
-    .photoright{
-        width:auto;
-        height:350px;
-        float:right;
-        border:3px solid rgba(40,115,75,1);
-        padding:0px;
-        margin-left:15px;
-    }
-    .photoleft{
-        width:auto;
-        height:350px;
-        float:left;
-        border:3px solid rgba(40,115,75,1);
-        padding:0px;
-        margin-left:15px;
-    }
-    .servli{
-        display:block;
-        color:white;
-        text-align:center;
-        padding:16px;
-        text-decoration:none;
-        font-family:verdana;
-    }
-    .homeservlist{
-        text-align:center;
-        padding:0px;
-    }
     html{
-        scroll-behavior:smooth;
+        scroll-behavior: smooth;
     }
     .footer{
         background-color:rgba(40,115,75,0.9);
         padding:10px;
+        text-align:center;
         margin:-7.75px;
-        margin-top:525px;
+        margin-top:50px;
         height:200px;
     }
     .footercont{
@@ -220,8 +187,57 @@
         width:90%;
         text-align:center;
     }
+    .contblock{
+        margin-top:0px;
+    }
+    .textcont{
+        width:100%;
+        margin-top:50px;
+    }
+    .photoprop{
+        float:right;
+        width:500px;
+        height:auto;      
+        border:3px solid rgba(40,115,75,1);
+        padding:0px;
+        margin-left:50px;
+        margin-top:-10px;
+    }
+    .heading{
+        margin-top:0px;
+        font-family:Verdana;
+        text-align:left;
+        opacity:0.9;
+        color:white;
+        background-color:rgba(40,115,75,0.9);
+        padding:16px;
+        margin-left:0px;
+
+    }
+    .parastyle{
+        opacity:1;
+        font-size:133%;
+        font-family:arial;
+        margin-top:-20px;
+        margin-left:15px;
+        color:black;
+    }
+    .appointment{
+        width:50%;
+        padding:16px;
+        background-color:rgba(40,115,75,0.9);
+        box-shadow:0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        border:2px solid black;
+        box-sizing:border-box;
+        cursor:pointer;
+        font-weight:bold;
+        color:white;
+        font-family:verdana;
+        margin-left:525px;
+        text-decoration:none;
+    }
     </style>
-</head>
+    </head>
 
 <body onLoad="ovl();">
 <p>
@@ -232,17 +248,15 @@
 <div id="header1">
 Orion Multispecialty Hospital
 <div class="dpdnmain">
-<div class="dropdown" style="margin:right 10px;">
+<div class="dropdown" style="margin:0px;">
 <a id="iconhover" href="#about" style="padding:0px;"><img id="usericon" src="usericon.png" alt="User" usemap="#userclick"></a>
 <div class="dropdown-content" style="margin-top:70px;">
-    <a>My Details</a>
-    <a>Appointments</a>
-    <a>Upcoming Visits</a>
-    <a>My Doctors</a>
+    <a href="Login Page.html">Login</a>
+    <a href="hospitalForm.html">Signup</a>
 </div>
 </div>
 <!--map name="userclick">
-  <area shape="circle" coords="40,40,30" alt="usericon" href="homepage.html">
+<area shape="circle" coords="40,40,30" alt="usericon" href="homepage.html">
 </map-->
 </div>
 <div style="float:right;">
@@ -286,80 +300,60 @@ Orion Multispecialty Hospital
 
 <marquee><b>COVID-19 facilities available!</b></marquee>
 
-<p class="parastyle">
-<img class="photoright" src="photo1.jpg" alt="Hospital entry">
-<h2 class="heading">
-<p style="margin-top:75px;font-family:Verdana;text-align:center;opacity:0.9;color:white;background-color:rgba(40,115,75,0.9);width:40%;padding:16px;margin-left:100px;">We Offer Fast & Reliable Medical & Health
-Care Solutions to Our Patients</p>
-</h2>
+<div class="contblock">
+    <div style="margin-left:405px;margin-top:-285px;">
+        <h1>
+        <p style="margin-top:300px;font-family:Verdana;opacity:0.9;padding:16px;margin-left:0px;text-align:center;width:50%;background-color:rgba(100,205,100,0.86);color:black;border:2px solid black;">
+        International Patients
+        </p>
+        </h1>
+    </div>
+</div>
+<div class="contblock" style="margin-top:0px;" id="orthopedics">
+    <h2>
+    <p class="heading">
+    Why is Orion a preferred choice by International Patients?
+    </p>
+    </h2>
+    <div class="textcont">
+        <p class="parastyle">
+        <img class="photoprop" src="internationalpatients1.jpg" alt="">
+        With regular OPDs in Gulf & Central Africa region, thousands rely on Orion Multispecialty Hospital for being their healthcare partner. First overseas, patients sends their request to overseas team via email and within 24 Hours patients receives the Diagnosis, Treatment line, Treating Doctor profile, Estimate cost, length of stay required in hospital and country based on reports shared.
+        </p>
+        <br>
+        <p class="parastyle">
+        We assist our patients from overseas, in attaining visa, booking flights; manage their transportation from Airport to the hospital and their local transport as well. Keeping in mind they are far away from their home, we ensure to give them homely feeling by providing their preferred food and giving them utmost attention and care. Many of our International patients have liked Pune because of its environment, cultural heritage and compassionate people. Many patient have preferred Pune because of climatic conditions which are favourable to the recovery as compared to extreme weather in many metro cities in India. Right from the entry of the patient in the country till patient leaves the country Orion team of full time translators accompany patients to make life easier for them.
+        </p>
+        <br>
+        <h3><p class="parastyle">Patient Support Services</p></h3>
+        <p class="parastyle">
+        Sancheti cares for patients and it resonate with International patients too. Services like booking flights, Hotel,cabs, exchanging currency and many more such elements make patient journey with Sancheti a walk in the park.
+        </p>
+        <br>
+        <h3><p class="parastyle">Orion's International Patient Services:</p></h3>
+        <img class="photoprop" src="internationalpatients2.jpg" alt="">
+        <ul style="color:black;">
+        <li><p class="parastyle">Seamless, end-to-end services from line of treatment advice to consultant/doctor selection</p></li>
+        <li><p class="parastyle">Doctor consultation</p></li>
+        <li><p class="parastyle">Cost estimates for anticipated treatment</p></li>
+        <li><p class="parastyle">Appointment and detailed treatment schedule including OT booking</p></li>
+        <li><p class="parastyle">Coordination of Registration and Admissions</p></li>
+        <li><p class="parastyle">Room reservation</p></li>
+        <li><p class="parastyle">Special dietary needs</p></li>
+        <li><p class="parastyle">Post-discharge follow-up by treating doctor to ensure patient compliance</p></li>
+        <li><p class="parastyle">All copies of reports/films after consultation documented for patient</p></li>
+        <li><p class="parastyle">Online payment option</p></li>
+        <li><p class="parastyle">Visa assistance</p></li>
+        <li><p class="parastyle">Embassy assistance</p></li>
+        <li><p class="parastyle">Hotel services / Apartments bookings</p></li>
+        <li><p class="parastyle">Dedicated International Patient Services helpdesk to facilitate registration with police, foreign exchange, local transport, confirmation of air tickets, shopping etc</p></li>
+        <li><p class="parastyle">Language interpretation services</p></li>
+        </ul>
+    </div>
+</div>
 <br>
-<p class="parastyle" style="margin-top:15px;color:black;">
-Orion hospital is a multispecialty hospital with facilities available for common illness as well as complex diseases. It is located in heart of Wakad, Pune. It is one and the only hospital in nearby vicinity which has got sophisticated treatments such as IVF (Test tube baby), Joint replacements, arthroscopies, Intensive care unit, digital X-ray under one roof.
-</p>
-</p>
+<a class="appointment" href="contactus.html">Book an appointment!</a>
 
-<br>
-<br>
-<br>
-
-<p class="parastyle">
-<img class="photoleft" src="photo2.jpg" alt="Hospital room">
-<div style="background-color:rgba(40,115,75,0.9);margin:25px;">
-<div style="background-color:rgba(40,115,75,0.9);width:25%;float:left;margin-left:60px;margin-top:20px;">
-<ul class="homeservlist">
-<li class="servli">Orthopedics</li>
-<li class="servli">Gynecology & Infertility</li>
-<li class="servli">IVF</li>
-<li class="servli">Breast Clinic</li>
-<li class="servli">ENT</li>
-</div>
-<div style="background-color:rgba(40,115,75,0.9);width:25%;float:left;margin-left:60px;margin-top:20px;">
-<ul class="homeservlist">
-<li class="servli">Paediatric</li>
-<li class="servli">General Surgery</li>
-<li class="servli">Joint Replacement</li>
-<li class="servli">Physiotherapy</li>
-<li class="servli">General Medicines</li>
-</div>
-</div>
-</p>
-
-<br>
-<br>
-<br>
-
-<p class="parastyle">
-<img class="photoright" src="photo3.jpg" alt="Hospital room 2" style="margin-top:80px;">
-<h2 class="heading">
-<p style="margin-top:490px;font-family:Verdana;text-align:center;opacity:0.9;color:white;background-color:rgba(40,115,75,0.9);width:40%;padding:16px;margin-left:100px;">
-Why choose Orion Health Care?</p>
-</h2>
-</p>
-
-<p class="parastyle">
-<img class="photoleft" src="photo4.jpg" alt="Hospital room 3" style="margin-top:150px;">
-<p class="parastyle" style="margin-top:15px;">
-<div style="background-color:rgba(40,115,75,0.9);width:25%;float:left;padding:10px;margin-left:25px;margin-top:50px;height:135px;font-family:arial;">
-<h3 style="color:white;border-bottom:2px solid black;">7,000+ Healing Hands</h3>
-Largest network of the world’s finest and brightest medical experts who provide compassionate care using outstanding expertise and advanced technology.
-</div>
-</p>
-<div style="background-color:rgba(40,115,75,0.9);width:25%;float:left;padding:10px;margin-left:35px;margin-top:50px;height:135px;font-family:arial;">
-<h3 style="color:white;border-bottom:2px solid black;">4,000+ Pharmacies</h3>
-Apollo Pharmacy is India’s first, largest and most trusted branded pharmacy network, with over 4000 plus outlets covering the entire nation.
-</div>
-
-<div style="background-color:rgba(40,115,75,0.9);width:25%;float:left;padding:10px;margin-left:25px;margin-top:15px;height:135px;font-family:arial;">
-<h3 style="color:white;border-bottom:2px solid black;">Most Advanced Healthcare Technology</h3>
-Apollo Hospitals has been the pioneer in bringing ground-breaking healthcare technologies to India.
-</div>
-</p>
-<div style="background-color:rgba(40,115,75,0.9);width:25%;float:left;padding:10px;margin-left:35px;margin-top:15px;height:135px;font-family:arial;">
-<h3 style="color:white;border-bottom:2px solid black;">Best Clinical Outcomes</h3>
-Leveraging its vast medical expertise & technological advantage, Apollo Hospitals has consistently delivered best in class clinical outcomes.
-</div>
-</p>
-</p>
 <br>
 <div class="footer">
     <div style="margin-left:0px;margin-top:0px;">
@@ -390,3 +384,5 @@ Leveraging its vast medical expertise & technological advantage, Apollo Hospital
     </div>
 </div>
 </body>
+</html>
+
