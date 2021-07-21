@@ -1,15 +1,343 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title></title></head>
-<body>
-<div class="col-mid-6">
-<h2> register here</h2>
-<form action="registration.php" method="post">
-<div class="form-group">
-<label>Username</label>
-<input type="text" name="user" class="form-control" required></div>
-<div class="form-group">
-<label>Password</label>
-<input type="password" name="password" class="form-control" required></div>
-<button type="submit" class="btn btn-primary">Register</button>
-</form></div></div>
+    <title>Registration Page - Orion Hospital</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+    function ovl(){
+    document.getElementById("overlay").style.display = "block";
+    }
+    </script>
+    <style>
+        .reg-form {
+            width: 350px;
+            padding: 16px;
+            margin: 0 auto;
+            margin-top: 25px;
+            font-family: Tahoma, Geneva, sans-serif;
+            background-color: rgba(40,115,75,0.86);
+        }
+        .reg-form h1 {
+            text-align: center;
+            padding-bottom: 20px;
+            font-family: calibri;
+            border-bottom: 2px solid black;
+            color: white;
+        }
+        .inputfields{
+            width: 100%;
+            padding: 16px;
+            border: 1px solid black;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            background-color: rgba(255,255,255,0.5);
+            color: black;
+            font-size: 100%;
+        }
+        ::placeholder{
+            color: black;
+        }
+        .reg-form button[type="submit"] {
+            width: 100%;
+            padding: 16px;
+            background-color: rgba(100,205,100,0.86);
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+            border: 2px solid black;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-weight: bold;
+            color: black;
+        }
+        .reg-form input[type="reset"] {
+            padding: 6px;
+            background-color: rgba(100,205,100,0.86);
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+            border: 2px solid black;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-weight: bold;
+            color: black;
+        }
+        body{
+            background-image:url('../bggreen2.jpg');
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-attachment:fixed; 
+            color:white;
+        }
+        #overlay{
+            position:fixed;
+            display:none;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color:rgba(0,0,0,0.15);
+            z-index:-5;
+        }
+        #usericon{
+            width:55px;
+            height:auto;
+            padding:10px;
+            z-index:1;
+            float:right;
+        }
+        #logo1{
+            width:150px;
+            height:auto;
+            float:right;
+            padding:10px;
+        }
+        #header1{
+            float:left;
+            width:100%;
+            font-family:Brush Script MT;
+            font-size:400%;
+            text-align:center;
+            z-index:1;
+            background-color:rgba(40,115,75,0.86);
+            margin-bottom:-10px;
+            color:white;
+        }
+        .dpdnmain{
+            overflow:hidden;
+            float:right;
+        }
+        .dpdnmain a{
+            float:left;
+            font-size:16px;
+            color:white;
+            text-align: center;
+            padding:12px 16px;
+            text-decoration:none;
+        }
+        .dropdown{
+            font-size:16px;  
+            border:none;
+            outline:none;
+            color:white;
+            font-family:inherit;
+            float:left;
+            overflow:hidden;
+        }
+        .dropdown-content{
+            display:none;
+            position:absolute;
+            background-color:rgba(40,115,75,1);
+            min-width:2px;
+            box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index:2;
+        }
+        .dropdown-content a{
+            float:none;
+            color:white;
+            font-family:verdana;
+            font-size:87%;
+            background-color:rgba(40,115,75,1);
+            text-decoration:none;
+            display:block;
+            text-align:left;
+            z-index:2;
+        }
+        .dropdown-content a:hover{
+            background-color:rgba(100,205,100,1);
+            color:black;;
+        }
+        .dropdown:hover .dropdown-content{
+            display:block;
+        }
+        #navbar{
+            float:left;
+            width:100%;
+            font-family:verdana;
+            font-size:100%;
+            text-align:center;
+            z-index:1;
+        }
+        #navlist{
+            list-style-type:none;
+            margin-top:10px;
+            width:100%;
+            float:left;
+            padding:0;
+            overflow:hidden;
+            background-color:rgba(100,205,100,0.86);
+            border-top:2px solid black;
+        }
+        .navli{
+            float:left;
+            border-right:2px solid black;
+        }
+        .navlia{
+            display:block;
+            color:black;
+            text-align:center;
+            padding:16px;
+            text-decoration:none;
+            font-family:verdana;
+        }
+        .navaccount{
+            float:right;
+        }
+        .navlia:hover{
+            background-color:rgba(40,115,75,0.5);
+        }
+        li a:hover{
+            background-color:rgba(40,115,75,0.5);
+        }
+        #iconhover:hover{
+            background-color:rgba(100,205,100,0.5);
+        }
+        marquee{
+            background-color:rgba(40,115,75,0.86);
+            height:25px;
+            padding:2px;
+            margin-top:-16px;
+            font-family:verdana;
+            border-top:2px solid black;
+            color:orangered;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .footer{
+            background-color:rgba(40,115,75,0.9);
+            padding:10px;
+            text-align:center;
+            margin:-7.75px;
+            margin-top:25px;
+            height:200px;
+        }
+        .footercont{
+            float:left;
+            margin-top:0px;
+            font-family:Verdana;
+            opacity:0.9;
+            padding:16px;
+            text-align:center;
+            width:20%;
+        }
+        .footerheading{
+            font-family:Verdana;
+            opacity:0.9;
+            padding:16px;
+            text-align:center;
+            width:75%;
+            background-color:rgba(100,205,100,0.86);
+            color:black;
+            border:2px solid black;
+            margin-top:0px;
+        }
+        .footertext{
+            width:90%;
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body onLoad="ovl();">
+<p>
+<div id="overlay"></div>
+</p>
+
+<p>
+<div id="header1">
+Orion Multispecialty Hospital
+<div class="dpdnmain">
+<div class="dropdown" style="margin:0px;">
+<a id="iconhover" href="#about" style="padding:0px;"><img id="usericon" src="../usericon.png" alt="User" usemap="#userclick"></a>
+<div class="dropdown-content" style="margin-top:70px;">
+    <a href="../Login Page.html">Login</a>
+    <a href="../hospitalForm.html">Signup</a>
+</div>
+</div>
+<!--map name="userclick">
+<area shape="circle" coords="40,40,30" alt="usericon" href="homepage.html">
+</map-->
+</div>
+<div style="float:right;">
+<img id="logo1" src="../finalorionlogo.png" alt="Orion Logo">
+</div>
+</div>
+
+<p>
+<div id="navbar">
+<ul id="navlist">
+    <li class="navli" style="border-left:2px solid black;"><a class="navlia" href="../homepage.html">Home</a></li>
+    <li class="navli"><a class="navlia" href="../aboutus.html">About Us</a></li>
+    <li style="float:left;margin:-16px;">
+    <div class="dpdnmain" style="display:block;color:white;text-align:center;padding:16px;text-decoration:none;font-family:verdana;">
+    <div class="dropdown">
+    <a href="../services.html" style="padding:16px;color:black;border-right:2px solid black;">Services <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content" style="margin-top:50px;">
+        <a style="width:125%;" href="../services.html#orthopedics">Orthopedics</a>
+        <a style="width:125%;" href="../services.html#gynecology">Gynecology & Infertility</a>
+        <a style="width:125%;" href="../services.html#ivf">IVF</a>
+        <a style="width:125%;" href="../services.html#breastclinic">Breast Clinic</a>
+        <a style="width:125%;" href="../services.html#ent">ENT</a>
+        <a style="width:125%;" href="../services.html#paediatric">Paediatric</a>
+        <a style="width:125%;" href="../services.html#generalsurgery">General Surgery</a>
+        <a style="width:125%;" href="../services.html#orthopedics">Joint Replacement</a>
+        <a style="width:125%;" href="../services.html#physiotherapy">Physiotherapy</a>
+        <a style="width:125%;" href="../services.html#generalmedicines">General Medicines</a>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li class="navli"><a class="navlia" href="../internationalpatients.html">International Patients</a></li>
+    <li class="navli"><a class="navlia" target="_blank" href="https://www.google.com/maps/place/Orion+Hospital/@18.6002771,73.7631583,15z/data=!4m5!3m4!1s0x0:0x4abc64840e9c9424!8m2!3d18.6002802!4d73.76314">Location</a></li>
+    <li class="navli"><a class="navlia" href="../ourteam.html">Our Team</a></li>
+    <li class="navli"><a class="navlia" href="../contactus.html">Contact Us</a></li>
+    <!--li class="navaccount"><a href="#signup">Signup</a></li>
+    <li class="navaccount"><a href="#login">Login</a></li-->
+</ul>
+</div>
+</p>
+
+<marquee><b>COVID-19 facilities available!</b></marquee>
+
+<div class="reg-form">
+    <h1> Register Here!</h1>
+    <form action="registration.php" method="post">
+        <input class="inputfields" type="text" name="user" placeholder="Username" required>
+        <input class="inputfields" type="password" name="password" placeholder="Password" required>
+        <button class="inputfields" type="submit" class="btn btn-primary">Register</button>
+        <input type="reset" value="Reset">
+    </form>
+</div>
+
+<br>
+<div class="footer">
+    <div style="margin-left:0px;margin-top:0px;">
+        <div class="footercont" style="margin-left:15px;border-right:2px solid black;">    
+            <h3 class="footerheading">Orion Hospital</h3>
+            <div class="footertext">
+            Orion Hospital is managed by a team of highly experienced and well qualified doctors. So you always get the best treatment.
+            </div>
+        </div>
+        <div class="footercont" style="margin-left:30px;border-right:2px solid black;">
+            <h3 class="footerheading">Address</h3>
+            <div class="footertext">
+            201 & 301, Akruti Avenue, S.No. 173, 201, Shankar Kalat Nagar, Thergaon Datta Mandir Road, Wakad
+            </div>
+        </div>
+        <div class="footercont" style="margin-left:30px;border-right:2px solid black;">
+            <h3 class="footerheading">Contact No.</h3>
+            <div class="footertext">
+            +919075745067, +918983860330, +916356824461, +917887899339, +917972385355
+            </div>
+        </div>
+        <div class="footercont" style="margin-left:30px;">
+            <h3 class="footerheading">Email</h3>
+            <div class="footertext">
+            orionhospital@gmail.com
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
